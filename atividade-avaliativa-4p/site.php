@@ -243,7 +243,42 @@
 
   <?php 
     $today = date('d/m/Y H:i:s');
-    echo "<p>Exibindo data com PHP - $today </p><br>"
+    echo "</br>Exibindo data com PHP - $today ";
+    $day = getdate();
+    switch ($day["wday"]) {
+      case 0:
+        echo "Hoje é Domingo";
+        break;
+      
+      case 1:
+        echo "Hoje é Segunda-Feira";
+        break;   
+  
+      case 2:
+        echo "Hoje é Terça-Feira";
+        break;
+        
+      case 3:
+        echo "Hoje é Quarta-Feira";
+        break;
+     
+      case 4:
+        echo "Hoje é Quinta-Feira";
+        break;
+
+      case 5:
+        echo "Hoje é Sexta-Feira";
+        break;
+  
+      case 6:
+        echo "Hoje é Sábado";
+        break;
+  
+      default:
+      echo "Não foi possivel definir o dia da semana";
+        break;
+    }
+
   ?>
 
   <script>
@@ -265,7 +300,7 @@
     const weekDescription = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
     const monthDescription = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
     
-    document.write("Hoje é " + weekDescription[week]+ " dia " + day + " de " + monthDescription[month] + " de " + year + " às " + hour);
+    document.write("</br>Exibindo data com Javascript - Hoje é " + weekDescription[week]+ " dia " + day + " de " + monthDescription[month] + " de " + year + " às " + hour);
 
     function changeBackGround(){
       const titleBackgroundColor = document.getElementById("titleChangeColor"); // Muda o background para azul quando passar o mouse por cima do titulo

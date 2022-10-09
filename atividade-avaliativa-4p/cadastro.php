@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Cadastro Cliente</title>
+</head>
+<style>
+    html{
+    color: white;
+    background: #092756;
+      background: 
+        -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), 
+        -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), 
+        -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%); 
+    
+    margin: 0px;
+    padding: 0px;
+
+    height: 100%;
+
+    display: flex;
+    justify-content: center;  /* Faz o alinhamento na horizontal */
+    align-items: center;      /* Faz o alinhamento na vertical */
+
+  }
+</style>
+<body>
+
+  <a href="site.php"> 
+    <img src="https://cdn-icons-png.flaticon.com/16/61/61449.png" alt="seta">
+    <button>Retornar para Home</button> 
+  </a>  <br>
+
+  <h2>Cadastro de Cliente</h2>
+
+  <form action="script_servidor.php" method="post">
+    
+    <fieldset> <br>
+      <legend> Fieldset Grupo I:</legend>
+    
+      <label>
+        Nome: <input type="text" id="nome" name="nome" placeholder="Seu nome"> &emsp;
+      </label>
+      
+      <label>
+        Endereço: <input type="text" id="email" name="email" placeholder="Seu e-mail"> &emsp;
+      </label>
+
+      <label> 
+        Telefone: <input type="text" placeholder="(xx) xxxx-xxxx" pattern="^\(?\d{2}\)\d{4}[-\s]\d{4}.*?$"> &emsp;
+      </label> 
+
+      <label>
+        Cidade: <input type="text" id="cidade" name="cidade" placeholder="Sua Cidade"> <br><br>
+      </label>
+
+      Sexo:<br>
+        <input type="radio" name="sexo" id="sexo" value="masculino" checked>Masculino
+        <br>
+        <input type="radio" name="sexo" id="sexo" value="feminino">Feminino
+        <br><br>
+        
+      <!-- Senha:<br><input type="password" name="psw" class="">             -->
+    </fieldset> <br>
+    
+    <fieldset>  <br>
+      <legend>Fieldset Grupo II:</legend>
+      <label>
+        CPF: <input type="text" id="cpf" name="cpf" placeholder="Seu CPF"> &emsp;
+      </label>
+
+      <label>
+        RG: <input type="text" id="rg" name="rg" placeholder="Seu RG"> <br>
+      </label>
+    </fieldset> <br>
+
+    <fieldset> <br>
+      <legend>Fieldset Grupo III:</legend>
+      
+      <label>
+        Estado Civil: <br>
+        <label> <input type="radio" name="est_civ" value="solteiro"> Solteiro </label> <br>
+        <label> <input type="radio" name="est_civ" value="Casado"> Casado </label> <br>
+        <label> <input type="radio" name="est_civ" value="Viuvo"> Viuvo </label> <br> <br>
+      </label>
+
+      <label>
+        Regiao do Brasil:
+        <select name="regiao">
+          <optgroup label="Norte"></optgroup>
+            <option value="Amazonas">Amazonas</option>
+            <option value="Acre">Acre</option>
+            <option value="Roraima">Roraima</option>
+          <optgroup label="Sul"></optgroup> 
+            <option value="Parana">Parana</option>
+            <option value="Santa Catarina">Santa Catarina</option>
+
+          <optgroup label="Sudeste"></optgroup>
+            <option value="Minas Gerais">Minas Gerais</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Espírito Santo">Espírito Santo</option>
+          </select>
+      </label>
+
+
+      <br> <br> Qual seu veiculo Preferido? <br>
+      <input type="checkbox" name="vehicle" value="Bike">Uma Bicicleta<br>
+      <input type="checkbox" name="vehicle" value="Car">Um Carro 
+      <br><br>
+      
+    Comentário:<br><textarea name="comment" placeholder="Coment&aacute;rio" rows="5" cols="50">Comentário sobre o cliente</textarea>
+      
+      <br><br>
+            
+    </fieldset>      <br>
+      <input type="submit" value="Gravar Dados">
+      <input type="reset" value="Apagar Dados">
+  </form>
+
+</body>
+</html>

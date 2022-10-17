@@ -60,9 +60,3 @@ require_once (__DIR__. "/controller/alunoController.php");
 </body>
 </html>
 
-<!-- <form action="./controller/AlunoController.php" method="GET">
-                      <input type="hidden" name="id_alu"">
-                      <button class="btn btn-danger">
-                        <input type="submit" value="Excluir">
-                      </button>
-                  </form> -->

@@ -50,15 +50,14 @@ class Conexao {
         }
 	}
 
-    // private function desconectar(){
-    //     try {
-    //         $this->conexao = null;
-    //         pg_close($conexao);	
-    //     } catch (\Throwable $th) {
-    //         echo "Falha ao desconectar. <br/>";
-    //         throw $th;
-    //     }
-    // }
+    public function desconectar(){
+        try {
+            $this->conexao = null;
+        } catch (\Throwable $th) {
+            echo "Falha ao desconectar. <br/>";
+            throw $th;
+        }
+    }
 
 
 }

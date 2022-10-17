@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  OI
+  
   <?php
       $pagina[1] = "cadastro.php";
       $pagina[2] = "produto.php";
